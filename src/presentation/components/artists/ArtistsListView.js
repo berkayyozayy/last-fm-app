@@ -6,7 +6,6 @@ import useHttp from "../../hooks/use-http";
 function ArtistListView({ image, label, count, listeners }) {
   const url = `${config.defaultUrl}`;
   const { data, loading, error } = useHttp(url);
-  console.log(data);
 
   if (error) {
     return <p>Someting went wrong broo</p>;
@@ -22,13 +21,15 @@ function ArtistListView({ image, label, count, listeners }) {
     <div className={styles["list-view"]}>
       {artistList.map((artist) => {
         return (
-          <Card
-            key={artist.mbid}
-            image={artist.image[3]["#text"]}
-            label={artist.name}
-            count={artist.playcount}
-            listeners={artist.listeners}
-          />
+          <div key={artist.mbid + artist.name}>
+            <Card
+              key={artist.mbid}
+              image={artist.image[3]["#text"]}
+              label={artist.name}
+              count={artist.playcount}
+              listeners={artist.listeners}
+            />
+          </div>
         );
       })}
     </div>
