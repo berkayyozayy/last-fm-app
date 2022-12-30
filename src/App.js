@@ -1,9 +1,10 @@
 import "./App.css";
+import ArtistsListView from "./presentation/components/artists/ArtistsListView";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello Fazla Gıdaaa</h1>
+      <ArtistsListView />
     </div>
   );
 }

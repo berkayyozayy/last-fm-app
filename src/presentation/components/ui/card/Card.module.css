@@ -1,0 +1,44 @@
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.card-wrapper:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 1.5rem;
+}
+
+.content h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.content p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .card-wrapper {
+    flex-direction: column;
+  }
+}
