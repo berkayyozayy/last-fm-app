@@ -1,0 +1,15 @@
+.list-view {
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.list-view div {
+  margin: 1rem;
+}
