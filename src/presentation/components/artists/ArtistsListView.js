@@ -2,13 +2,14 @@ import Card from "../ui/card/Card";
 import styles from "./ArtistsListView.module.css";
 import config from "../../../config/config";
 import useHttp from "../../hooks/use-http";
+import Error from "../common/error/Error";
 
 function ArtistListView({ image, label, count, listeners }) {
   const url = `${config.defaultUrl}`;
   const { data, loading, error } = useHttp(url);
 
   if (error) {
-    return <p>Someting went wrong broo</p>;
+    return <Error message={error.message} />;
   }
 
   if (loading) {
