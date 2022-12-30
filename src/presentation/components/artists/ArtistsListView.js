@@ -3,6 +3,7 @@ import styles from "./ArtistsListView.module.css";
 import config from "../../../config/config";
 import useHttp from "../../hooks/use-http";
 import Error from "../common/error/Error";
+import Loading from "../common/loading/Loading";
 
 function ArtistListView({ image, label, count, listeners }) {
   const url = `${config.defaultUrl}`;
@@ -13,7 +14,7 @@ function ArtistListView({ image, label, count, listeners }) {
   }
 
   if (loading) {
-    return <p>Cool down it s coming...</p>;
+    return <Loading />;
   }
 
   const artistList = data?.artists?.artist;
