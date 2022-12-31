@@ -6,9 +6,10 @@ import useHttp from "../../../hooks/use-http";
 import Error from "../../common/error/Error";
 import Loading from "../../common/loading/Loading";
 
-function ArtistListView({ image, label, count, listeners }) {
+function ArtistListView() {
   const url = `${config.defaultUrl}`;
   const { data, loading, error } = useHttp(url);
+  const title = "Artist";
 
   if (error) {
     return <Error message={error.message} />;
@@ -31,6 +32,7 @@ function ArtistListView({ image, label, count, listeners }) {
             >
               <Card
                 key={artist.mbid}
+                title={title}
                 image={artist.image[4]["#text"]}
                 label={artist.name}
                 count={artist.playcount}

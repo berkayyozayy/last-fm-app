@@ -23,7 +23,6 @@ function TopTracks() {
   }
 
   const trackList = data?.toptracks?.track;
-  console.log(trackList);
 
   return (
     <div className={styles["tracks-wrapper"]}>

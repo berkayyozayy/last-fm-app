@@ -1,6 +1,6 @@
 import styles from "./Card.module.css";
 
-function Card({ image, label, count, listeners }) {
+function Card({ image, title, label, count, listeners }) {
   return (
     <div className={styles["card"]}>
       <div className={styles["image"]}>
@@ -8,7 +8,7 @@ function Card({ image, label, count, listeners }) {
       </div>
       <div className={styles["content"]}>
         <div className={styles["info"]}>
-          <p className={styles["title"]}>User</p>
+          <p className={styles["title"]}>{title}</p>
           <p className={styles["label"]}>{label}</p>
         </div>
         <div className={styles["sub-info"]}>
