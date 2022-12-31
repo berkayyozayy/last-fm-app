@@ -12,8 +12,8 @@ function ListView({ image, label, count, listeners, showListeners, url }) {
             </div>
             <div className={styles.content}>
               <p className={styles.title}>{label}</p>
-              <p className={styles.playCount}>Playcount: {count}</p>
-              {showListeners && <p>Listeners: {listeners}</p>}
+              <span className={styles.playCount}>Playcount: {count}</span>
+              {showListeners && <span>Listeners: {listeners}</span>}
             </div>
           </div>
         </div>
