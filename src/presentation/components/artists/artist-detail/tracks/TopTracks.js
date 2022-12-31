@@ -23,6 +23,7 @@ function TopTracks() {
   }
 
   const trackList = data?.toptracks?.track;
+  console.log(trackList);
 
   return (
     <div className={styles["tracks-wrapper"]}>
@@ -30,6 +31,7 @@ function TopTracks() {
         return (
           <ListView
             key={track.mbid}
+            name={track.artist.name}
             label={track.name}
             count={track.playcount}
             image={track.image[2]["#text"]}

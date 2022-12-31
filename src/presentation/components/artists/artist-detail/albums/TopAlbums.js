@@ -30,6 +30,7 @@ function TopAlbums() {
         return (
           <ListView
             key={album.mbid}
+            name={album.artist.name}
             label={album.name}
             count={album.playcount}
             image={album.image[2]["#text"]}
