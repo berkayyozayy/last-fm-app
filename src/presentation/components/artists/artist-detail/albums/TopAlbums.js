@@ -4,6 +4,7 @@ import { apiDataRoutes } from "../../../../../api-routes";
 import Error from "../../../common/error/Error";
 import Loading from "../../../common/loading/Loading";
 import ListView from "../../../ui/list-view/ListView";
+import styles from "./TopAlbums.module.css";
 
 function TopAlbums() {
   const location = useLocation();
@@ -22,16 +23,17 @@ function TopAlbums() {
   }
 
   const albumList = data?.topalbums?.album;
+  console.log(albumList);
 
   return (
-    <div>
+    <div className={styles["albums-wrapper"]}>
       {albumList.map((album) => {
         return (
           <ListView
             key={album.mbid}
             label={album.name}
             count={album.playcount}
-            image={album.image[0]["#text"]}
+            image={album.image[2]["#text"]}
             listeners={album.listeners}
           />
         );

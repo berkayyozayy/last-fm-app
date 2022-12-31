@@ -1,21 +1,29 @@
-.card {
+.list {
   display: flex;
   align-items: center;
   margin: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid red;
+  width: 100%;
 }
 
 .playCount {
   white-space: nowrap;
 }
 
-.image {
+.image-wrapper {
+  margin: 1rem 1rem 1rem;
+}
+
+.image-wrapper img {
+  width: 80px;
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
-}
-
-.title {
-  font-size: 1.2rem;
 }
 
 .content {
@@ -28,6 +36,7 @@
   .card {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
   .content {
     white-space: nowrap;

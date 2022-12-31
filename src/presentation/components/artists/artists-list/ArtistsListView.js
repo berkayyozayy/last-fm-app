@@ -5,7 +5,6 @@ import config from "../../../../config/config";
 import useHttp from "../../../hooks/use-http";
 import Error from "../../common/error/Error";
 import Loading from "../../common/loading/Loading";
-import ArtistDetailView from "../artist-detail/artist-detail-view/ArtistDetailView";
 
 function ArtistListView({ image, label, count, listeners }) {
   const url = `${config.defaultUrl}`;
@@ -32,7 +31,7 @@ function ArtistListView({ image, label, count, listeners }) {
             >
               <Card
                 key={artist.mbid}
-                image={artist.image[3]["#text"]}
+                image={artist.image[4]["#text"]}
                 label={artist.name}
                 count={artist.playcount}
                 listeners={artist.listeners}
