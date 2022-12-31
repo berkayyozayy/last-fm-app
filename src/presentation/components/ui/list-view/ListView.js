@@ -20,10 +20,14 @@ function ListView({
             </div>
             <div className={styles.content}>
               <p className={styles["name"]}>{name}</p>
-              <p className={styles.title}>{label}</p>
+              <span className={styles.title}>{label}</span>
               <hr />
-              <span className={styles.playCount}>Playcount: {count}</span>
-              {showListeners && <span>Listeners: {listeners}</span>}
+              <span className={styles["play-count"]}>Playcount: {count}</span>
+              {showListeners && (
+                <span className={styles["listeners"]}>
+                  Listeners: {listeners}
+                </span>
+              )}
             </div>
           </div>
         </div>
