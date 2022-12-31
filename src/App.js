@@ -1,12 +1,18 @@
 import "./App.css";
-import ArtistsListView from "./presentation/components/artists/ArtistsListView";
+import { Route, Switch } from "react-router-dom";
+
 import Header from "./presentation/components/ui/header/Header";
+import ArtistListView from "./presentation/components/artists/artists-list/ArtistsListView";
+import ArtistDetailView from "./presentation/components/artists/artist-detail/artist-detail-view/ArtistDetailView";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <ArtistsListView />
+      <Switch>
+        <Route strict exact path="/" component={ArtistListView} />
+        <Route path="/artist/:mbid" component={ArtistDetailView} />
+      </Switch>
     </div>
   );
 }
