@@ -33,6 +33,7 @@ function TopTracks() {
             label={track.name}
             count={track.playcount}
             image={track.image[2]["#text"]}
+            showListeners={true}
             listeners={track.listeners}
           />
         );
