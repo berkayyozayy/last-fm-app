@@ -9,7 +9,7 @@ function Card({ image, label, count, listeners }) {
       <div className={styles["content"]}>
         <div className={styles["info"]}>
           <p className={styles["title"]}>User</p>
-          <p>{label}</p>
+          <p className={styles["label"]}>{label}</p>
         </div>
         <div className={styles["sub-info"]}>
           <p>Playcount: {count}</p>
