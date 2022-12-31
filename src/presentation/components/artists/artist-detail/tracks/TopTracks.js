@@ -1,18 +1,18 @@
-import useHttp from "../../../../hooks/use-http";
 import { useLocation } from "react-router-dom";
+import styles from "./TopTracks.module.css";
 import { apiDataRoutes } from "../../../../../api-routes";
+import useHttp from "../../../../hooks/use-http";
 import Error from "../../../common/error/Error";
 import Loading from "../../../common/loading/Loading";
 import ListView from "../../../ui/list-view/ListView";
-import styles from "./TopAlbums.module.css";
 
-function TopAlbums() {
+function TopTracks() {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const name = params.get("name");
-  const albumsUrl = apiDataRoutes.albums(name);
+  const tracksUrl = apiDataRoutes.tracks(name);
 
-  const { data, loading, error } = useHttp(albumsUrl);
+  const { data, error, loading } = useHttp(tracksUrl);
 
   if (error) {
     return <Error message={error.message} />;
@@ -22,18 +22,18 @@ function TopAlbums() {
     return <Loading />;
   }
 
-  const albumList = data?.topalbums?.album;
+  const trackList = data?.toptracks?.track;
 
   return (
-    <div className={styles["albums-wrapper"]}>
-      {albumList.map((album) => {
+    <div className={styles["tracks-wrapper"]}>
+      {trackList.map((track) => {
         return (
           <ListView
-            key={album.mbid}
-            label={album.name}
-            count={album.playcount}
-            image={album.image[2]["#text"]}
-            listeners={album.listeners}
+            key={track.mbid}
+            label={track.name}
+            count={track.playcount}
+            image={track.image[2]["#text"]}
+            listeners={track.listeners}
           />
         );
       })}
@@ -41,4 +41,4 @@ function TopAlbums() {
   );
 }
 
-export default TopAlbums;
+export default TopTracks;
