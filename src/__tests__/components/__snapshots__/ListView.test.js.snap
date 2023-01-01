@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list view component it should render 1`] = `
+<div>
+  <div
+    class="list-container"
+  >
+    <a
+      rel="noreferrer"
+      target="_blank"
+    >
+      <div
+        class="list"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="image-wrapper"
+          >
+            <img />
+          </div>
+          <div
+            class="content"
+          >
+            <p
+              class="name"
+            />
+            <span
+              class="title"
+            />
+            <hr />
+            <span
+              class="play-count"
+            >
+              Playcount: 
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+    <hr />
+  </div>
+</div>
+`;

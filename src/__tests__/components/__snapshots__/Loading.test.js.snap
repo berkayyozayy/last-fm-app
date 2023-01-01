@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loading component it should render 1`] = `
+<div>
+  <div
+    class="loading"
+  >
+    <div
+      class="circle"
+    />
+  </div>
+</div>
+`;

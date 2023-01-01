@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card component it should render 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <div
+      class="image"
+    >
+      <img />
+    </div>
+    <div
+      class="content"
+    >
+      <div
+        class="info"
+      >
+        <p
+          class="title"
+        />
+        <p
+          class="label"
+        />
+      </div>
+      <div
+        class="sub-info"
+      >
+        <p>
+          Playcount: 
+        </p>
+        <p>
+          Listeners: 
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
