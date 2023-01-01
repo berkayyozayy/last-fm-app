@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import ArtistListView from "./presentation/components/artists/artists-list/ArtistsListView";
@@ -16,8 +16,6 @@ const themes = {
   },
 };
 
-export const ThemeContext = createContext(themes.light);
-
 function App() {
   const [theme, setTheme] = useState(themes.light);
 
@@ -30,20 +28,18 @@ function App() {
   };
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <div className="App" style={theme}>
-        <div className="btn-wrapper">
-          <Button
-            onClick={toggleTheme}
-            label={theme === themes.dark ? "Dark Theme" : "Light Theme"}
-          />
-        </div>
-        <Switch>
-          <Route strict exact path="/" component={ArtistListView} />
-          <Route path="/artist/:mbid" component={ArtistDetailView} />
-        </Switch>
+    <div className="App" style={theme}>
+      <div className="btn-wrapper">
+        <Button
+          onClick={toggleTheme}
+          label={theme === themes.dark ? "Dark Theme" : "Light Theme"}
+        />
       </div>
-    </ThemeContext.Provider>
+      <Switch>
+        <Route strict exact path="/" component={ArtistListView} />
+        <Route path="/artist/:mbid" component={ArtistDetailView} />
+      </Switch>
+    </div>
   );
 }
 

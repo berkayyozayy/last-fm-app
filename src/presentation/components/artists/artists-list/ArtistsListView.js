@@ -1,5 +1,4 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../../../../App";
+import React from "react";
 import { Link } from "react-router-dom";
 import Card from "../../ui/card/Card";
 import styles from "./ArtistsListView.module.css";
@@ -9,8 +8,6 @@ import Error from "../../common/error/Error";
 import Loading from "../../common/loading/Loading";
 
 function ArtistListView() {
-  const theme = useContext(ThemeContext);
-  // console.log("theme", theme);
   const url = `${config.defaultUrl}`;
   const { data, loading, error } = useHttp(url);
   const title = "Artist";
@@ -26,7 +23,7 @@ function ArtistListView() {
   const artistList = data?.artists?.artist;
 
   return (
-    <div className={styles["list-view"]} style={theme}>
+    <div className={styles["list-view"]}>
       {artistList.map((artist) => {
         return (
           <div key={artist.mbid + artist.name}>
