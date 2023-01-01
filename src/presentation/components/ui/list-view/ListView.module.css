@@ -44,7 +44,7 @@
 @media (max-width: 480px) and (max-width: 768px) {
   .card {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     width: 100%;
   }
   .content {
