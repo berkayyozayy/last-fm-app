@@ -29,7 +29,7 @@ function TopAlbums() {
       {albumList.map((album) => {
         return (
           <ListView
-            key={album.mbid}
+            key={album.mbid + album.name}
             name={album.artist.name}
             label={album.name}
             count={album.playcount}
