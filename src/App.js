@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Routes from "./routes/routes";
+import Routes from "./routes/Routes";
 import { ThemeToggle, themes } from "./presentation/theme/ThemeToggle";
 
 function App() {
