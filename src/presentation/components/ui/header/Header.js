@@ -1,4 +1,8 @@
 function Header() {
-  return <h1>Top Artists</h1>;
+  return (
+    <div>
+      <h1>Last.fm Top Artists</h1>
+    </div>
+  );
 }
 export default Header;

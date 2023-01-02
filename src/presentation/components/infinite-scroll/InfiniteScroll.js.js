@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./InfiniteScroll.module.css";
 import config from "../../../config/config";
 import Button from "../ui/button/Button";
+import Header from "../ui/header/Header";
 
 const InfiniteScroll = () => {
   const [data, setData] = useState([]);
@@ -60,36 +61,39 @@ const InfiniteScroll = () => {
   }, [page]);
 
   return (
-    <div className={styles["list-view"]}>
-      {data.map((artist) => {
-        return (
-          <div key={"-link-" + artist.mbid + "--" + artist.name}>
-            <Link
-              to={`/artist/${artist.mbid}?name=${artist.name}`}
-              className={styles.link}
-            >
-              <Card
-                key={artist.mbid + artist.name}
-                title={title}
-                image={artist.image[4]["#text"]}
-                label={artist.name}
-                count={artist.playcount}
-                listeners={artist.listeners}
-              />
-            </Link>
+    <>
+      <Header />
+      <div className={styles["list-view"]}>
+        {data.map((artist) => {
+          return (
+            <div key={"-link-" + artist.mbid + "--" + artist.name}>
+              <Link
+                to={`/artist/${artist.mbid}?name=${artist.name}`}
+                className={styles.link}
+              >
+                <Card
+                  key={artist.mbid + artist.name}
+                  title={title}
+                  image={artist.image[4]["#text"]}
+                  label={artist.name}
+                  count={artist.playcount}
+                  listeners={artist.listeners}
+                />
+              </Link>
+            </div>
+          );
+        })}
+        {hasMore && (
+          <div
+            className={styles["btn-wrapper"]}
+            ref={targetElement}
+            onClick={() => setPage(page + 1)}
+          >
+            <Button label={btnLabel} />
           </div>
-        );
-      })}
-      {hasMore && (
-        <div
-          className={styles["btn-wrapper"]}
-          ref={targetElement}
-          onClick={() => setPage(page + 1)}
-        >
-          <Button label={btnLabel} />
-        </div>
-      )}
-    </div>
+        )}
+      </div>
+    </>
   );
 };
 
