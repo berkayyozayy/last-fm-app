@@ -47,7 +47,7 @@ const InfiniteScroll = () => {
         );
         setData([...data, ...filteredData]);
 
-        if (!res.artists.artist) {
+        if (!filteredData) {
           setHasMore(false);
         }
       });
