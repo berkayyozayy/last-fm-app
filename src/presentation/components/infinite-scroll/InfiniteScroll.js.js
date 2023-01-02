@@ -42,7 +42,10 @@ const InfiniteScroll = () => {
     fetch(`${config.defaultUrl}&page=${page}`)
       .then((res) => res.json())
       .then((res) => {
-        setData([...data, ...res.artists.artist]);
+        const filteredData = res.artists.artist.filter(
+          (artist) => !data.some((a) => a.mbid === artist.mbid)
+        );
+        setData([...data, ...filteredData]);
 
         if (!res.artists.artist) {
           setHasMore(false);
