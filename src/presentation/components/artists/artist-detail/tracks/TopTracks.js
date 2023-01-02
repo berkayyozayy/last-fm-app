@@ -29,7 +29,7 @@ function TopTracks() {
       {trackList.map((track) => {
         return (
           <ListView
-            key={track.mbid}
+            key={track.mbid + track.name}
             name={track.artist.name}
             label={track.name}
             count={track.playcount}
