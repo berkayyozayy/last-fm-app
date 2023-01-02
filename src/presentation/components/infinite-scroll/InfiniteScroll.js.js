@@ -12,6 +12,7 @@ const InfiniteScroll = () => {
   const observer = useRef(null);
   const targetElement = useRef(null);
   const btnLabel = "Load More";
+  const title = "Artist";
 
   useEffect(() => {
     observer.current = new IntersectionObserver((entries) => {
@@ -66,7 +67,7 @@ const InfiniteScroll = () => {
             >
               <Card
                 key={artist.mbid + artist.name}
-                title={artist.name}
+                title={title}
                 image={artist.image[4]["#text"]}
                 label={artist.name}
                 count={artist.playcount}
