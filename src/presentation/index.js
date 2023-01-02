@@ -4,7 +4,7 @@ import {
   ArtistDetailView,
 } from "../presentation/components/index";
 
-function Routes() {
+function Home() {
   return (
     <Switch>
       <Route strict exact path="/" component={ArtistListView} />
@@ -13,4 +13,4 @@ function Routes() {
   );
 }
 
-export default Routes;
+export default Home;

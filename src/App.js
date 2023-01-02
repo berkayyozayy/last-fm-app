@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import Routes from "./routes/Routes";
+import Home from "./presentation/index";
 import { ThemeToggle, themes } from "./presentation/theme/ThemeToggle";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App" style={theme}>
       <ThemeToggle theme={theme} setTheme={setTheme} />
-      <Routes />
+      <Home />
     </div>
   );
 }
