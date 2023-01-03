@@ -1,8 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 
-import TopAlbums from "../albums/TopAlbums";
-import TopTracks from "../tracks/TopTracks";
+import TopAlbums from "presentation/components/artists/artist-detail/albums/TopAlbums";
+import TopTracks from "presentation/components/artists/artist-detail/tracks/TopTracks";
 import styles from "./ArtistDetailView.module.css";
 
 function ArtistDetailView() {

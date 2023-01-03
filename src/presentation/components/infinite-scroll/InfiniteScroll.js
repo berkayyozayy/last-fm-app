@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import Card from "../ui/card/Card";
+import Card from "presentation/components/ui/card/Card";
 import { Link } from "react-router-dom";
 import styles from "./InfiniteScroll.module.css";
-import config from "../../../config/config";
-import Button from "../ui/button/Button";
-import Header from "../ui/header/Header";
+import config from "config/config";
+import Button from "presentation/components/ui/button/Button";
+import Header from "presentation/components/ui/header/Header";
 
 const InfiniteScroll = () => {
   const [data, setData] = useState([]);

@@ -1,9 +1,9 @@
-import useHttp from "../../../../hooks/use-http";
+import useHttp from "presentation/hooks/use-http";
 import { useLocation } from "react-router-dom";
-import { apiDataRoutes } from "../../../../../api-routes";
-import Error from "../../../common/error/Error";
-import Loading from "../../../common/loading/Loading";
-import ListView from "../../../ui/list-view/ListView";
+import { apiDataRoutes } from "api-routes";
+import Error from "presentation/components/common/error/Error";
+import Loading from "presentation/components/common/loading/Loading";
+import ListView from "presentation/components/ui/list-view/ListView";
 import styles from "./TopAlbums.module.css";
 
 function TopAlbums() {

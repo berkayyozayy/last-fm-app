@@ -2,9 +2,9 @@ import { useLocation } from "react-router-dom";
 import styles from "./TopTracks.module.css";
 import { apiDataRoutes } from "../../../../../api-routes";
 import useHttp from "../../../../hooks/use-http";
-import Error from "../../../common/error/Error";
-import Loading from "../../../common/loading/Loading";
-import ListView from "../../../ui/list-view/ListView";
+import Error from "presentation/components/common/error/Error";
+import Loading from "presentation/components/common/loading/Loading";
+import ListView from "presentation/components/ui/list-view/ListView";
 
 function TopTracks() {
   const location = useLocation();

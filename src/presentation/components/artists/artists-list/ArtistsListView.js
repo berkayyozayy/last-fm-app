@@ -1,5 +1,5 @@
 import React from "react";
-import InfiniteScroll from "../../../components/infinite-scroll/InfiniteScroll.js";
+import InfiniteScroll from "presentation/components/infinite-scroll/InfiniteScroll";
 
 function ArtistListView() {
   return <InfiniteScroll />;
