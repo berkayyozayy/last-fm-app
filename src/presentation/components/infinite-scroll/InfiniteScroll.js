@@ -40,7 +40,7 @@ const InfiniteScroll = () => {
       return;
     }
 
-    fetch(`${config.defaultUrl}&page=${page}`)
+    fetch(`${config.defaultUrl}&page=${encodeURIComponent(page)}`)
       .then((res) => res.json())
       .then((res) => {
         const filteredData = res.artists.artist.filter(
@@ -68,7 +68,9 @@ const InfiniteScroll = () => {
           return (
             <div key={"-link-" + artist.mbid + "--" + artist.name}>
               <Link
-                to={`/artist/${artist.mbid}?name=${artist.name}`}
+                to={`/artist/${artist.mbid}?name=${encodeURIComponent(
+                  artist.name
+                )}`}
                 className={styles.link}
               >
                 <Card
