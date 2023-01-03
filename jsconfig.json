@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "api-routes/*": ["api-routes/*"],
+      "config/*": ["config/*"],
+      "presentation/*": ["presentation/*"],
+      "presentation/components/*": ["presentation/components/*"],
+      "presentation/hooks/*": ["presentation/hooks/*"],
+      "presentation/theme/*": ["presentation/theme/*"],
+      "presentation/components/artists/*": ["presentation/components/artist/*"],
+      "presentation/components/common/*": ["presentation/components/common/*"],
+      "presentation/components/infinite-scroll/*": [
+        "presentation/components/infinite-scroll/*"
+      ],
+      "presentation/components/ui/*": ["presentation/components/ui/*"],
+      "presentation/components/ui/button/*": [
+        "presentation/components/ui/button/*"
+      ],
+      "presentation/components/ui/card/*": [
+        "presentation/components/ui/card/*"
+      ],
+      "presentation/components/ui/header/*": [
+        "presentation/components/ui/header/*"
+      ],
+      "presentation/components/ui/list-view/*": [
+        "presentation/components/ui/list-view/*"
+      ]
+    }
+  },
+  "include": ["src", "node_modules"]
+}
