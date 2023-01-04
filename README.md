@@ -37,6 +37,13 @@ npm install
 npm start
 ```
 
+## Running the tests
+
+```sh
+npm test
+```
+
+
 ## .env file
 
 This file contains environment variables that are used by the application. It should be created in the root directory of the project. Copy the contents of the .env.example file into your own .env file and paste your own api key.
